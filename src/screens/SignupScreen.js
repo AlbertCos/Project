@@ -8,6 +8,7 @@ function SignupScreen() {
 
     const register =(e) =>{
         e.preventDefault();
+        
         auth.createUserWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value,

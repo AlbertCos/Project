@@ -1,10 +1,4 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';        // for authentication
-import 'firebase/storage';     // for storage
-import 'firebase/database';    // for realtime database
-import 'firebase/firestore';   // for cloud firestore
-import 'firebase/messaging';   
-import 'firebase/functions';
+import firebase from 'firebase';
 
 const firebaseConfig = {
     apiKey: "AIzaSyB7Tk9YMAP_0sii6nfZ9POOHVh-ABMF8GI",
@@ -19,5 +13,8 @@ const firebaseConfig = {
   const db = firebaseApp.firestore();
   const auth = firebase.auth();
 
+
+
   export {auth};
+
   export default db;
