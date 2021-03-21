@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {useSelector} from "react-redux";
 import db from '../firebase';
 import "./PlansScreen.css"
+import {selectUser} from "../features/userSlice";
+import {loadStripe} from "@stripe/stripe-js";
 
 
 function PlansScreen() {
@@ -44,6 +46,12 @@ function PlansScreen() {
             if (error){
                 alert(`An error occured: ${error.message}`);
             }
+
+            if (sessionId){
+
+                const stripe = await loadStripe()
+            }
+            stripe.redirectToCheckOut({sessionId});
         });
     };
 
